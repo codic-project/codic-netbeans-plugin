@@ -310,7 +310,7 @@ public class CodicTranslateDialog extends JDialog implements FocusListener {
                     if (removeLength > 0) {
                         document.remove(selectionStart, removeLength);
                     }
-                    document.insertString(selectionStart, translation.getTranslatedText(), null);
+                    document.insertString(selectionStart, translation.getTranslatedTextInCasing(), null);
                 } catch (BadLocationException ex) {
                     LOGGER.log(Level.WARNING, "Invalid offset:" + ex.offsetRequested(), ex); // NOI18N
                 }
@@ -497,7 +497,7 @@ public class CodicTranslateDialog extends JDialog implements FocusListener {
             String text = null;
             if (value instanceof Translation) {
                 Translation translation = (Translation) value;
-                text = translation.getTranslatedText();
+                text = translation.getTranslatedTextInCasing();
             } else if (value instanceof Casing) {
                 Casing casing = (Casing) value;
                 text = casing.getSimpleDisplay();
@@ -533,14 +533,12 @@ public class CodicTranslateDialog extends JDialog implements FocusListener {
 
         @Override
         public String getTranslatedText() {
-            String translatedText = base.getTranslatedText();
-            return CodicUtils.convertTo(translatedText, casing);
+            return base.getTranslatedText();
         }
 
         @Override
         public String getTranslatedTextInCasing() {
-            String translatedTextInCasing = base.getTranslatedTextInCasing();
-            return CodicUtils.convertTo(translatedTextInCasing, casing);
+            return CodicUtils.convertTo(getTranslatedText(), casing);
         }
 
         @Override
