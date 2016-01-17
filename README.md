@@ -55,3 +55,7 @@
 ## バグ・リクエスト
 
 バグやリクエストがありましたら、GitHubの [Issues](https://github.com/codic-project/codic-netbeans-plugin/issues) へ報告をおねがいします。
+
+## ライセンス
+
+The MIT license
