@@ -8,7 +8,7 @@
 
 ## インストール
 
-[releases](https://github.com/codic-project/codic-netbeans-plugin/releases)からnbmをダウンロードします。
+[releases](https://github.com/codic-project/codic-netbeans-plugin/releases) もしくは [Plugin Portal](http://plugins.netbeans.org/plugin/62523/codic) からnbmをダウンロードします。
 ツール > プラグイン > ダウンロード済 > プラグインの追加 からダウンロードしたnbmを選択してインストールします。
 
 ## 使い方
@@ -55,3 +55,7 @@
 ## バグ・リクエスト
 
 バグやリクエストがありましたら、GitHubの [Issues](https://github.com/codic-project/codic-netbeans-plugin/issues) へ報告をおねがいします。
+
+## ライセンス
+
+The MIT license

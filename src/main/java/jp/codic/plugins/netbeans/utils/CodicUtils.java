@@ -40,6 +40,7 @@ import org.openide.modules.Modules;
 public final class CodicUtils {
 
     private static String VERSION;
+    private static String USER_AGENT;
     private static final String USER_AGENT_FORMAT = "Codic NetBeans Plugin/%s"; // NOI18N
     private static final String CODE_NAME_BASE = "jp.codic.plugins.netbneas"; // NOI18N
 
@@ -204,7 +205,10 @@ public final class CodicUtils {
     }
 
     public static String getUserAgent() {
-        return String.format(USER_AGENT_FORMAT, getVersion());
+        if (USER_AGENT == null) {
+            USER_AGENT = String.format(USER_AGENT_FORMAT, getVersion());
+        }
+        return USER_AGENT;
     }
 
     public static String getVersion() {
